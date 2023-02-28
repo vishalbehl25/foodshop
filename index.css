@@ -1,0 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: rgb(62, 83, 83);
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.navbar {
+    display: flex;      
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+
+.navbar::before {
+    content: "";
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.menubtn {
+    display: none;
+}
+
+
+
+.navbar ul {
+    display: flex;
+}
+
+.navbar li {
+    list-style: none;
+    margin: 20px;
+}
+
+.navbar li a {
+   
+    border: 2px solid rgb(29, 213, 94);
+    padding: 2px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 20px;
+    transition: 0.8s ease-in-out;
+
+}
+
+.navbar li a:hover {
+    color: black;
+    background-color: white;
+    border: rgb(128, 0, 13) 2px solid;
+}
+
+.navbar img {
+    border-radius: 50%;
+    width: 50px;
+    margin-left: 20px;
+}
+
+
+
+/* _______________________ section    home____________________________           */
+.home {
+    height: 560px;
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px rgb(252, 252, 255);
+    font-weight: bolder;
+}
+
+
+
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('images/home.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 82%;
+    z-index: -1;
+    opacity: 0.80;
+}
+
+
+.btn {
+    font-size: 12px;
+    font-weight: 800;
+    background-color: rgb(255, 0, 0);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+
+
+
+
+/* ____________________services______________________ */
+
+
+
+
+.services {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    padding-top: 80px;
+}
+
+.sercontainer {
+
+    display: flex;
+}
+
+
+.servicesbox {
+    border: 2px solid brown;
+    height: 232px;
+    width: 465px;
+    margin: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 15px 30px;
+    background-color: antiquewhite;
+    color: black;
+
+}
+
+.servicesbox img {
+    width: 150px;
+
+}
+
+/* <!-- _____________menu___________________--- --> */
+
+.menuu {
+    font-size: 30px;
+    color: white;
+    margin: 2%;
+    justify-content: center;
+    text-align: center;
+}
+
+.menuu img {
+    border: 5px solid brown;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+
+
+
+
+
+
+
+/* _____________special items ______________ */
+
+.special {
+    width: 100%;
+    margin-top: 60px;
+
+}
+
+.clearfix {
+    padding: 2%;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+
+.img-container {
+    background-color: white;
+    width: 400px;
+    margin: 20px;
+    border-radius: 20px;
+    padding: 20px;
+    border: 3px solid red;
+}
+
+.img-container img {
+    width: 300px;
+    height: 200px;
+}
+
+
+.special h1,
+.services h1 {
+    text-shadow: 2px 2px red;
+
+    background-color: white;
+    color: black;
+    width: 200px;
+    margin: auto;
+    border-radius: 20px
+}
+
+
+
+
+
+
+
+
+
+/* ______________ contact us _________________ */
+
+
+form {
+    margin: auto;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    border: 3px solid brown;
+    border-radius: 20px;
+    padding: 20px;
+
+}
+
+label {
+    margin-top: 20px;
+    font-size: 30px;
+
+}
+
+input,
+select {
+    width: 300px;
+    font-size: 20px;
+    border-radius: 20px;
+
+}
+
+input[type=button] {
+
+    width: 150px;
+}
+
+
+
+
+
+/*  _________________responsive______________ */
+
+@media only screen and (max-width: 1235px) {
+
+    .clearfix {
+        flex-wrap: wrap;
+    }
+
+    .services {
+
+        font-size: 18px;
+
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .menubtn {
+        position: fixed;
+        display: block;
+        background-color: white;
+        width: 50px;
+        border-radius: 50%;
+        z-index: 2;
+        margin-left: 5px;
+    }
+
+
+    .navbar {
+        align-items: center;
+        justify-content: center;
+
+    }
+
+   .bar {
+        align-items: center;
+        background-color: rgb(35, 27, 27);
+        position: absolute;
+        left: 0;
+        top: -552px;
+        text-align: center;
+        flex-direction: column;
+        transition: 0.9s ease-in-out;
+        z-index: -52;
+        width: 100%;
+        height: 0px;  
+        display: none;
+    }
+    
+    .barr{
+     
+        top: 52px;
+    height: 280px;  
+    
+}
+
+
+    .home {
+        height: 556px;
+        padding: 0;
+        font-size: 15px;
+
+    }
+
+
+    .clearfix {
+        flex-wrap: wrap;
+    }
+
+    .sercontainer {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .servicesbox {
+        padding: 5px 10px;
+    }
+
+    .servicesbox p {
+        font-size: 17px;
+    }
+
+    .menuu {
+        font-size: 30px;
+        color: white;
+        margin: 2%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .menuu img {
+        width: 339px;
+        margin: 0;
+    }
+
+    form {
+        width: 300px;
+    }
+
+
+}
